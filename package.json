@@ -1,0 +1,91 @@
+{
+    "name": "exp-static-hbomax-proveyourfandom",
+    "description": "EXP HBO Max Prove Your Fandom",
+    "version": "0.0.5",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/twenty-four-7/exp-static-hbomax-proveyourfandom"
+    },
+    "main": "index.js",
+    "scripts": {
+        "network-info": "echo \"ℹ ｢wds｣: Project is on local network at http:/\" | tr \"\n\" \"/\"; ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print $2}' | head -n 1",
+        "start": "set ENVIRONMENT=local&& webpack-dev-server",
+        "build": "ENVIRONMENT=production webpack --mode production",
+        "deploy": "ENVIRONMENT=production bash ./scripts/deploy.sh",
+        "postversion": "npm run build; npm run deploy"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ],
+        "rules": {
+            "comma-dangle": [
+                1,
+                "always-multiline"
+            ],
+            "semi": [
+                "warn",
+                "never"
+            ],
+            "quotes": [
+                "warn",
+                "single"
+            ],
+            "indent": [
+                "warn",
+                2
+            ]
+        }
+    },
+    "devDependencies": {
+        "@babel/core": "^7.13.16",
+        "@babel/plugin-proposal-class-properties": "^7.13.0",
+        "@babel/plugin-transform-runtime": "^7.13.15",
+        "@babel/preset-env": "^7.13.15",
+        "@babel/preset-react": "^7.13.13",
+        "@svgr/webpack": "^5.5.0",
+        "@types/react": "^17.0.6",
+        "@types/react-transition-group": "^4.4.1",
+        "@types/shuffle-array": "^1.0.0",
+        "@types/styled-components": "^5.1.9",
+        "@typescript-eslint/eslint-plugin": "^4.24.0",
+        "@typescript-eslint/parser": "^4.24.0",
+        "babel-eslint": "^10.1.0",
+        "babel-loader": "^8.2.2",
+        "babel-plugin-styled-components": "^1.12.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.4.1",
+        "css-loader": "^5.2.6",
+        "dotenv-webpack": "^7.0.2",
+        "eslint": "^7.27.0",
+        "eslint-config-react-app": "^6.0.0",
+        "eslint-plugin-flowtype": "^5.7.2",
+        "eslint-plugin-import": "^2.23.3",
+        "eslint-plugin-jest": "^24.3.6",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-testing-library": "^3.9.0",
+        "file-loader": "^6.2.0",
+        "fork-ts-checker-webpack-plugin": "^6.2.10",
+        "html-webpack-plugin": "^4.5.2",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "style-loader": "^2.0.0",
+        "styled-components": "^5.2.3",
+        "ts-loader": "^8.3.0",
+        "typescript": "^4.2.4",
+        "webpack": "^4.46.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {
+        "@react-aria/button": "^3.3.2",
+        "@use-it/interval": "^1.0.0",
+        "react-idle-timer": "^4.6.2",
+        "react-player": "^2.9.0",
+        "react-transition-group": "^4.4.1",
+        "shuffle-array": "^1.0.1"
+    }
+}

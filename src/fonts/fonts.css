@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'ATTAleckSans';
+  src: url('./ATTAleckSansFixed_Rg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ATTAleckSans';
+  font-weight: bold;
+  src: url('./ATTAleckSansFixed_Bd.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ATTAleckCd';
+  font-weight: 300;
+  src: url('./ATTAleckCdFixed_Lt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ATTAleckCd';
+  src: url('./ATTAleckCdFixed_Rg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ATTAleckCd';
+  font-weight: bold;
+  src: url('./ATTAleckCdFixed_Bd.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AmericanTypewriter';
+  src: url('./American_Typewriter_Regular.ttf') format('truetype');
+}
